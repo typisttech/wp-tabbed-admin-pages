@@ -36,3 +36,19 @@ if (! defined('WPINC')) {
 }
 
 require_once __DIR__ . '/vendor/autoload.php';
+
+add_action(
+    'admin_menu',
+    function () {
+        $menuPage = new MenuPage('WP Tabbed AdminPages Demo - Main', 'Main', 'my-main');
+        $submenuPages = [
+            new SubmenuPage('WP Tabbed AdminPages Demo - Sub A', 'Sub A', 'my-sub-a'),
+            new SubmenuPage('WP Tabbed AdminPages Demo - Sub B', 'Sub B', 'my-sub-b'),
+            new SubmenuPage('WP Tabbed AdminPages Demo - Sub C', 'Sub C', 'my-sub-c'),
+        ];
+
+        $registrar = new Registrar($menuPage);
+        $registrar->add(...$submenuPages);
+        $registrar->run();
+    }
+);
