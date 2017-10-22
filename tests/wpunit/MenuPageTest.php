@@ -27,6 +27,18 @@ class MenuPageTest extends WPTestCase
     }
 
     /** @test */
+    public function it_is_an_instance_of_renderable_page_interface()
+    {
+        $this->assertInstanceOf(RenderablePageInterface::class, $this->minimalSubject);
+    }
+
+    /** @test */
+    public function it_is_an_instance_of_tabbable_page_interface()
+    {
+        $this->assertInstanceOf(TabbablePageInterface::class, $this->minimalSubject);
+    }
+
+    /** @test */
     public function it_is_an_instance_of_menu_page_interface()
     {
         $this->assertInstanceOf(MenuPageInterface::class, $this->minimalSubject);
@@ -116,6 +128,17 @@ class MenuPageTest extends WPTestCase
         $this->assertSame(
             100,
             $this->minimalSubject->getPosition()
+        );
+    }
+
+    /** @test */
+    public function it_has_snake_case_menu_slug_getter()
+    {
+        $subject = new MenuPage('My Page Title', 'My Menu Title', 'My-Custom-SLUG');
+
+        $this->assertSame(
+            'my_custom_slug',
+            $subject->getSnakeCaseMenuSlug()
         );
     }
 }

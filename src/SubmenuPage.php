@@ -4,14 +4,14 @@
  *
  * Create WordPress admin pages with tabbed navigations, the OOP way.
  *
- * @package TypistTech\WPTabbedAdminPages
+ * @package   TypistTech\WPTabbedAdminPages
  *
- * @author Typist Tech <wp-tabbed-admin-pages@typist.tech>
+ * @author    Typist Tech <wp-tabbed-admin-pages@typist.tech>
  * @copyright 2017 Typist Tech
- * @license GPL-2.0+
+ * @license   GPL-2.0+
  *
- * @see https://www.typist.tech/projects/wp-tabbed-admin-pages
- * @see https://github.com/TypistTech/wp-tabbed-admin-pages
+ * @see       https://www.typist.tech/projects/wp-tabbed-admin-pages
+ * @see       https://github.com/TypistTech/wp-tabbed-admin-pages
  */
 
 declare(strict_types=1);

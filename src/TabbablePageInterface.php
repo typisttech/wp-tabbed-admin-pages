@@ -18,22 +18,8 @@ declare(strict_types=1);
 
 namespace TypistTech\WPTabbedAdminPages;
 
-interface SubmenuPageInterface extends RenderablePageInterface, TabbablePageInterface
+interface TabbablePageInterface
 {
-    /**
-     * The text to be displayed in the title tags of the page when the menu is selected.
-     *
-     * @return string
-     */
-    public function getPageTitle(): string;
-
-    /**
-     * The text to be used for the menu.
-     *
-     * @return string
-     */
-    public function getMenuTitle(): string;
-
     /**
      * The slug name to refer to this menu by (should be unique for this menu).
      *
@@ -42,9 +28,9 @@ interface SubmenuPageInterface extends RenderablePageInterface, TabbablePageInte
     public function getMenuSlug(): string;
 
     /**
-     * The capability required for this menu to be displayed to the user.
+     * The text to be used for the menu.
      *
      * @return string
      */
-    public function getCapability(): string;
+    public function getMenuTitle(): string;
 }

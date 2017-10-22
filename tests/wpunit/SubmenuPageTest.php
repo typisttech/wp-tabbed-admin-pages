@@ -25,6 +25,18 @@ class SubmenuPageTest extends WPTestCase
     }
 
     /** @test */
+    public function it_is_an_instance_of_renderable_page_interface()
+    {
+        $this->assertInstanceOf(RenderablePageInterface::class, $this->minimalSubject);
+    }
+
+    /** @test */
+    public function it_is_an_instance_of_tabbable_page_interface()
+    {
+        $this->assertInstanceOf(TabbablePageInterface::class, $this->minimalSubject);
+    }
+
+    /** @test */
     public function it_is_an_instance_of_submenu_page_interface()
     {
         $this->assertInstanceOf(SubmenuPageInterface::class, $this->minimalSubject);
@@ -78,6 +90,17 @@ class SubmenuPageTest extends WPTestCase
         $this->assertSame(
             'manage_options',
             $this->minimalSubject->getCapability()
+        );
+    }
+
+    /** @test */
+    public function it_has_snake_case_menu_slug_getter()
+    {
+        $subject = new SubmenuPage('My Page Title', 'My Menu Title', 'My-Custom-SLUG');
+
+        $this->assertSame(
+            'my_custom_slug',
+            $subject->getSnakeCaseMenuSlug()
         );
     }
 }

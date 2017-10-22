@@ -4,14 +4,14 @@
  *
  * Create WordPress admin pages with tabbed navigations, the OOP way.
  *
- * @package TypistTech\WPTabbedAdminPages
+ * @package   TypistTech\WPTabbedAdminPages
  *
- * @author Typist Tech <wp-tabbed-admin-pages@typist.tech>
+ * @author    Typist Tech <wp-tabbed-admin-pages@typist.tech>
  * @copyright 2017 Typist Tech
- * @license GPL-2.0+
+ * @license   GPL-2.0+
  *
- * @see https://www.typist.tech/projects/wp-tabbed-admin-pages
- * @see https://github.com/TypistTech/wp-tabbed-admin-pages
+ * @see       https://www.typist.tech/projects/wp-tabbed-admin-pages
+ * @see       https://github.com/TypistTech/wp-tabbed-admin-pages
  */
 
 declare(strict_types=1);
@@ -70,14 +70,7 @@ class MenuPage extends AbstractPage implements MenuPageInterface
     }
 
     /**
-     * The URL to the icon to be used for this menu.
-     *
-     *  - Pass a base64-encoded SVG using a data URI, which will be colored to match the color scheme. This should
-     *  begin with 'data:image/svg+xml;base64,'.
-     *  - Pass the name of a Dashicons helper class to use a font icon, e.g. 'dashicons-chart-pie'.
-     *  - Pass 'none' to leave div.wp-menu-image empty so an icon can be added via CSS.
-     *
-     * @return string
+     * {@inheritdoc}
      */
     public function getIconUrl(): string
     {
@@ -85,9 +78,7 @@ class MenuPage extends AbstractPage implements MenuPageInterface
     }
 
     /**
-     * The position in the menu order this one should appear.
-     *
-     * @return int
+     * {@inheritdoc}
      */
     public function getPosition(): int
     {

@@ -4,14 +4,14 @@
  *
  * Create WordPress admin pages with tabbed navigations, the OOP way.
  *
- * @package TypistTech\WPTabbedAdminPages
+ * @package   TypistTech\WPTabbedAdminPages
  *
- * @author Typist Tech <wp-tabbed-admin-pages@typist.tech>
+ * @author    Typist Tech <wp-tabbed-admin-pages@typist.tech>
  * @copyright 2017 Typist Tech
- * @license GPL-2.0+
+ * @license   GPL-2.0+
  *
- * @see https://www.typist.tech/projects/wp-tabbed-admin-pages
- * @see https://github.com/TypistTech/wp-tabbed-admin-pages
+ * @see       https://www.typist.tech/projects/wp-tabbed-admin-pages
+ * @see       https://github.com/TypistTech/wp-tabbed-admin-pages
  */
 
 /**
@@ -36,3 +36,19 @@ if (! defined('WPINC')) {
 }
 
 require_once __DIR__ . '/vendor/autoload.php';
+
+add_action(
+    'admin_menu',
+    function () {
+        $menuPage = new MenuPage('WP Tabbed AdminPages Demo - Main', 'Main', 'my-main');
+        $submenuPages = [
+            new SubmenuPage('WP Tabbed AdminPages Demo - Sub A', 'Sub A', 'my-sub-a'),
+            new SubmenuPage('WP Tabbed AdminPages Demo - Sub B', 'Sub B', 'my-sub-b'),
+            new SubmenuPage('WP Tabbed AdminPages Demo - Sub C', 'Sub C', 'my-sub-c'),
+        ];
+
+        $registrar = new Registrar($menuPage);
+        $registrar->add(...$submenuPages);
+        $registrar->run();
+    }
+);
