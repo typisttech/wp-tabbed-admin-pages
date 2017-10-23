@@ -64,7 +64,7 @@
                     "homepage": "https://www.typist.tech/"
                 }
             ],
-            "description": "Create WordPress admin pages with tabbed navigations, the OOP way",
+            "description": "Create tabbed navigation for WordPress admin dashboard, the OOP way",
             "homepage": "https://www.typist.tech/projects/wp-admin-tabs",
             "keywords": [
                 "wordpress",
