@@ -21,6 +21,8 @@ modules:
             title: "Test"
 coverage:
     enabled: true
-    whitelist:
-        include:
-            - src/*
+    include:
+        - src/*
+    exclude:
+        - src/partials/*
+        - src/*Interface.php
