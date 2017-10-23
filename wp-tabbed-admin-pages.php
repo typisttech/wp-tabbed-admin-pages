@@ -40,7 +40,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 add_action(
     'admin_menu',
     function () {
-        $menuPage = new MenuPage('WP Tabbed AdminPages Demo - Main', 'Main', 'my-main');
+        $menuPage = new MenuPage('WP Tabbed AdminPages Demo - Main', 'Demo Main', 'my-demo-main');
         $submenuPages = [
             new SubmenuPage('WP Tabbed AdminPages Demo - Sub A', 'Sub A', 'my-sub-a'),
             new SubmenuPage('WP Tabbed AdminPages Demo - Sub B', 'Sub B', 'my-sub-b'),
