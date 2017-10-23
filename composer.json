@@ -47,6 +47,11 @@
         }
     },
     "scripts": {
+        "build": [
+            "rm -fr vendor",
+            "composer install --no-dev --prefer-dist --optimize-autoloader --no-suggest",
+            "composer archive --format=zip --dir=release --file=wp-tabbed-admin-pages"
+        ],
         "check-style": "phpcs --standard=ruleset.xml --colors -p -s .",
         "fix-style": "phpcbf --standard=ruleset.xml -p --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 .",
         "install-dev-extra": [
@@ -57,8 +62,16 @@
             "doctoc README.md",
             "github_changelog_generator --no-verbose"
         ],
-        "test": "codecept run",
-        "test-with-coverage": "codecept run --coverage --coverage-xml --coverage-html"
+        "test-functional": "codecept run functional",
+        "test-wpunit": "codecept run wpunit",
+        "test": [
+            "@test-wpunit",
+            "@test-functional"
+        ],
+        "test-with-coverage": [
+            "codecept run --coverage --coverage-xml --coverage-html",
+            "@test-functional"
+        ]
     },
     "extra": {
         "scripts-dev": {
@@ -68,5 +81,18 @@
     },
     "config": {
         "sort-packages": true
+    },
+    "archive": {
+        "exclude": [
+            "/*",
+            ".*",
+            "!/languages",
+            "!/lib",
+            "!/src",
+            "!/vendor",
+            "!/LICENSE",
+            "!/README.txt",
+            "!/*.php"
+        ]
     }
 }

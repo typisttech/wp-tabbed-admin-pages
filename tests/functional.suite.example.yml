@@ -1,0 +1,12 @@
+modules:
+    config:
+        WPDb:
+            dsn: 'mysql:host=192.168.93.100:4030;dbname=local'
+            user: 'root'
+            password: 'root'
+            url: 'http://wp-tabbed-admin-pages.local'
+        WordPress:
+            wpRootFolder: '/Users/me/Local Sites/wptabbedadminpages/app/public'
+            adminUsername: 'admin'
+            adminPassword: 'password'
+            adminPath: '/wp-admin'
