@@ -3,7 +3,7 @@ modules:
         WPLoader:
             wpRootFolder: "/Users/me/Local Sites/wptabbedadminpages/app/public"
             dbName: "local"
-            dbHost: "wp-tabbed-admin-pages.local:4030"
+            dbHost: "192.168.93.100:4030"
             dbUser: "root"
             dbPassword: "root"
             domain: "wp-tabbed-admin-pages.local"
