@@ -18,8 +18,13 @@ declare(strict_types=1);
 
 namespace TypistTech\WPTabbedAdminPages;
 
-abstract class AbstractPage implements RenderablePageInterface, TabbablePageInterface
+use TypistTech\WPKsesView\ViewAwareTrait;
+use TypistTech\WPKsesView\ViewAwareTraitInterface;
+
+abstract class AbstractPage implements RenderablePageInterface, TabbablePageInterface, ViewAwareTraitInterface
 {
+    use ViewAwareTrait;
+
     const DEFAULT_CAPABILITY = 'manage_options';
 
     /**
@@ -76,14 +81,6 @@ abstract class AbstractPage implements RenderablePageInterface, TabbablePageInte
     public function getMenuSlug(): string
     {
         return $this->pageSlug;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function render()
-    {
-        echo 'TODO: Actually implements this render method!!!!';
     }
 
     /**

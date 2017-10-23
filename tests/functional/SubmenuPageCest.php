@@ -17,4 +17,14 @@ class SubmenuPageCest
             $I->grabTextFrom('h1')
         );
     }
+
+    /** @test */
+    public function it_renders_its_view(FunctionalTester $I)
+    {
+        $I->loginAsAdmin();
+        $I->amOnAdminPage('admin.php?page=my-sub-a');
+
+        $I->see('You are now on: Sub A');
+        $I->see('All work and no play makes Jack a dull boy.');
+    }
 }

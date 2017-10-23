@@ -31,6 +31,8 @@ declare(strict_types=1);
 namespace TypistTech\WPTabbedAdminPages;
 
 // If this file is called directly, abort.
+use TypistTech\WPKsesView\Factory;
+
 if (! defined('WPINC')) {
     die;
 }
@@ -41,11 +43,21 @@ add_action(
     'admin_menu',
     function () {
         $menuPage = new MenuPage('WP Tabbed AdminPages Demo - Main', 'Demo Main', 'my-demo-main');
+        $menuPage->setView(
+            Factory::build(__DIR__ . '/partials/demo-main.php')
+        );
+
         $submenuPages = [
             new SubmenuPage('WP Tabbed AdminPages Demo - Sub A', 'Sub A', 'my-sub-a'),
             new SubmenuPage('WP Tabbed AdminPages Demo - Sub B', 'Sub B', 'my-sub-b'),
             new SubmenuPage('WP Tabbed AdminPages Demo - Sub C', 'Sub C', 'my-sub-c'),
         ];
+
+        // Of course you want to use different views for different pages in real life.
+        $submenuPageView = Factory::build(__DIR__ . '/partials/the-shining.php');
+        foreach ($submenuPages as $submenuPage) {
+            $submenuPage->setView($submenuPageView);
+        }
 
         $registrar = new Registrar($menuPage);
         $registrar->add(...$submenuPages);

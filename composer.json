@@ -89,15 +89,15 @@
     },
     "archive": {
         "exclude": [
-            "/*",
             ".*",
-            "!/languages",
+            "/*",
+            "!/*.php",
             "!/lib",
-            "!/src",
-            "!/vendor",
             "!/LICENSE",
+            "!/partials",
             "!/README.txt",
-            "!/*.php"
+            "!/src",
+            "!/vendor"
         ]
     }
 }
