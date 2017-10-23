@@ -74,7 +74,7 @@
             "@test-functional"
         ],
         "test-with-coverage": [
-            "codecept run --coverage --coverage-xml --coverage-html",
+            "codecept run wpunit --coverage --coverage-xml --coverage-html",
             "@test-functional"
         ]
     },
@@ -89,15 +89,15 @@
     },
     "archive": {
         "exclude": [
-            "/*",
             ".*",
-            "!/languages",
+            "/*",
+            "!/*.php",
             "!/lib",
-            "!/src",
-            "!/vendor",
             "!/LICENSE",
+            "!/partials",
             "!/README.txt",
-            "!/*.php"
+            "!/src",
+            "!/vendor"
         ]
     }
 }

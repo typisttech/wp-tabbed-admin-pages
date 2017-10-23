@@ -4,7 +4,11 @@ declare(strict_types=1);
 
 namespace TypistTech\WPTabbedAdminPages;
 
+use AspectMock\Test;
 use Codeception\TestCase\WPTestCase;
+use TypistTech\WPKsesView\View;
+use TypistTech\WPKsesView\ViewAwareTraitInterface;
+use UnexpectedValueException;
 
 /**
  * @covers \TypistTech\WPTabbedAdminPages\SubmenuPage
@@ -40,6 +44,12 @@ class SubmenuPageTest extends WPTestCase
     public function it_is_an_instance_of_submenu_page_interface()
     {
         $this->assertInstanceOf(SubmenuPageInterface::class, $this->minimalSubject);
+    }
+
+    /** @test */
+    public function it_is_an_instance_of_view_aware_trait_interface()
+    {
+        $this->assertInstanceOf(ViewAwareTraitInterface::class, $this->minimalSubject);
     }
 
     /** @test */
@@ -101,6 +111,33 @@ class SubmenuPageTest extends WPTestCase
         $this->assertSame(
             'my_custom_slug',
             $subject->getSnakeCaseMenuSlug()
+        );
+    }
+
+    /** @test */
+    public function it_echos_its_view_with_itself_as_the_context()
+    {
+        $view = Test::double(View::class);
+        $this->minimalSubject->setView(
+            $view->construct(
+                codecept_data_dir('dummy-template.php'),
+                wp_kses_allowed_html('post')
+            )
+        );
+
+        $this->minimalSubject->render();
+
+        $view->verifyInvokedOnce('render', [$this->minimalSubject]);
+    }
+
+    /** @test */
+    public function it_throws_unexpected_value_exception_when_rendering_without_view()
+    {
+        $this->tester->expectException(
+            new UnexpectedValueException('View is null. Perhaps you have not set a view object.'),
+            function () {
+                $this->minimalSubject->render();
+            }
         );
     }
 }
