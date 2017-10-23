@@ -43,9 +43,8 @@ env:
 matrix:
   allow_failures:
     - php: nightly
-    - env:
-      - WP_VERSION=nightly
-      - WP_VERSION=nightly COMPOSER_UPDATE_DEPENDENCIES=true
+    - env: WP_VERSION=nightly
+    - env: WP_VERSION=nightly COMPOSER_UPDATE_DEPENDENCIES=true
   fast_finish: true
 
 before_install:
