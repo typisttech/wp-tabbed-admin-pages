@@ -8,7 +8,6 @@ use AspectMock\Test;
 use Codeception\TestCase\WPTestCase;
 use TypistTech\WPKsesView\View;
 use TypistTech\WPKsesView\ViewAwareTraitInterface;
-use UnexpectedValueException;
 
 /**
  * @covers \TypistTech\WPTabbedAdminPages\MenuPage
@@ -166,16 +165,5 @@ class MenuPageTest extends WPTestCase
         $this->minimalSubject->render();
 
         $view->verifyInvokedOnce('render', [$this->minimalSubject]);
-    }
-
-    /** @test */
-    public function it_throws_unexpected_value_exception_when_rendering_without_view()
-    {
-        $this->tester->expectException(
-            new UnexpectedValueException('View is null. Perhaps you have not set a view object.'),
-            function () {
-                $this->minimalSubject->render();
-            }
-        );
     }
 }

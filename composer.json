@@ -5,18 +5,18 @@
         "wordpress",
         "wp"
     ],
-    "homepage": "https://www.typist.tech/projects/wp-tabbed-admin-pages",
-    "license": "GPL-2.0+",
+    "homepage": "https://typist.tech/projects/wp-tabbed-admin-pages",
+    "license": "GPL-2.0-or-later",
     "authors": [
         {
             "name": "Typist Tech",
             "email": "wp-tabbed-admin-pages@typist.tech",
-            "homepage": "https://www.typist.tech/"
+            "homepage": "https://typist.tech/"
         },
         {
             "name": "Tang Rufus",
             "email": "tangrufus@gmail.com",
-            "homepage": "https://www.typist.tech/",
+            "homepage": "https://typist.tech/",
             "role": "Developer"
         }
     ],
@@ -27,8 +27,8 @@
     },
     "require": {
         "php": ">7.0",
-        "typisttech/wp-admin-tabs": "^0.2.0",
-        "typisttech/wp-kses-view": "^0.2.0"
+        "typisttech/wp-admin-tabs": "^0.3.1",
+        "typisttech/wp-kses-view": "^0.4.1"
     },
     "require-dev": {
         "codeception/aspect-mock": "^2.0",
@@ -52,13 +52,7 @@
             "@composer install --no-dev --prefer-dist --optimize-autoloader --no-suggest",
             "@composer archive --format=zip --dir=release --file=wp-tabbed-admin-pages"
         ],
-        "build-with-update": [
-            "rm -fr vendor",
-            "@composer update --no-dev --prefer-dist --optimize-autoloader --no-suggest",
-            "@composer archive --format=zip --dir=release --file=wp-tabbed-admin-pages"
-        ],
         "check-style": "phpcs --standard=ruleset.xml --colors -p -s .",
-        "fix-style": "phpcbf --standard=ruleset.xml -p --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 .",
         "install-dev-extra": [
             "phpcs --config-set installed_paths vendor/wp-coding-standards/wpcs"
         ],
@@ -67,15 +61,15 @@
             "doctoc README.md",
             "github_changelog_generator --no-verbose"
         ],
-        "test-functional": "codecept run functional",
-        "test-wpunit": "codecept run wpunit",
+        "test:functional": "codecept run functional",
+        "test:wpunit": "codecept run wpunit",
         "test": [
-            "@test-wpunit",
-            "@test-functional"
+            "@test:wpunit",
+            "@test:functional"
         ],
-        "test-with-coverage": [
+        "test:coverage": [
             "codecept run wpunit --coverage --coverage-xml --coverage-html",
-            "@test-functional"
+            "@test:functional"
         ]
     },
     "extra": {

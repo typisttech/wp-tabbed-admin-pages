@@ -7,5 +7,4 @@
 # Export white-listed production code only.
 /src            -export-ignore
 /composer.json  -export-ignore
-/composer.lock  -export-ignore
 /LICENSE        -export-ignore
