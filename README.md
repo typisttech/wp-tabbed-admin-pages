@@ -7,10 +7,9 @@
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/TypistTech/wp-tabbed-admin-pages/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/TypistTech/wp-tabbed-admin-pages/?branch=master)
 [![PHP Versions Tested](http://php-eye.com/badge/typisttech/wp-tabbed-admin-pages/tested.svg)](https://travis-ci.org/TypistTech/wp-tabbed-admin-pages)
 [![StyleCI](https://styleci.io/repos/107813662/shield?branch=master)](https://styleci.io/repos/107813662)
-[![Dependency Status](https://gemnasium.com/badges/github.com/TypistTech/wp-tabbed-admin-pages.svg)](https://gemnasium.com/github.com/TypistTech/wp-tabbed-admin-pages)
 [![License](https://poser.pugx.org/typisttech/wp-tabbed-admin-pages/license)](https://packagist.org/packages/typisttech/wp-tabbed-admin-pages)
-[![Donate via PayPal](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://www.typist.tech/donate/wp-tabbed-admin-pages/)
-[![Hire Typist Tech](https://img.shields.io/badge/Hire-Typist%20Tech-ff69b4.svg)](https://www.typist.tech/contact/)
+[![Donate via PayPal](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://typist.tech/donate/wp-tabbed-admin-pages/)
+[![Hire Typist Tech](https://img.shields.io/badge/Hire-Typist%20Tech-ff69b4.svg)](https://typist.tech/contact/)
 
 Create WordPress admin pages with tabbed navigations, the OOP way.
 
@@ -24,10 +23,8 @@ Create WordPress admin pages with tabbed navigations, the OOP way.
 - [Frequently Asked Questions](#frequently-asked-questions)
   - [Can two different plugins use this package at the same time?](#can-two-different-plugins-use-this-package-at-the-same-time)
   - [Do you have real life examples that use this package?](#do-you-have-real-life-examples-that-use-this-package)
-- [Support!](#support)
-  - [Donate via PayPal *](#donate-via-paypal-)
+- [Support](#support)
   - [Why don't you hire me?](#why-dont-you-hire-me)
-  - [Want to help in other way? Want to be a sponsor?](#want-to-help-in-other-way-want-to-be-a-sponsor)
 - [Developing](#developing)
 - [Running the Tests](#running-the-tests)
 - [Feedback](#feedback)
@@ -78,20 +75,16 @@ Here you go:
  * [Sunny](https://github.com/Typisttech/sunny)
  * [WP Cloudflare Guard](https://github.com/TypistTech/wp-cloudflare-guard)
  * [WP Better Settings](https://github.com/TypistTech/wp-better-settings)
- 
+
 *Add your own plugin [here](https://github.com/TypistTech/wp-tabbed-admin-pages/edit/master/README.md)*
 
-## Support!
+## Support
 
-### Donate via PayPal [![Donate via PayPal](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://www.typist.tech/donate/wp-tabbed-admin-pages/)
-
-Love WP Tabbed Admin Pages? Help me maintain WP Tabbed Admin Pages, a [donation here](https://www.typist.tech/donate/wp-tabbed-admin-pages/) can help with it.
+Love `wp-tabbed-admin-pages`? Help me maintain it, a [donation here](https://typist.tech/donation/) can help with it.
 
 ### Why don't you hire me?
-Ready to take freelance WordPress jobs. Contact me via the contact form [here](https://www.typist.tech/contact/) or, via email info@typist.tech
 
-### Want to help in other way? Want to be a sponsor?
-Contact: [Tang Rufus](mailto:tangrufus@gmail.com)
+Ready to take freelance WordPress jobs. Contact me via the contact form [here](https://typist.tech/contact/) or, via email [info@typist.tech](mailto:info@typist.tech)
 
 ## Developing
 
@@ -117,7 +110,7 @@ $ composer test
 
 We also test all PHP files against [PSR-2: Coding Style Guide](http://www.php-fig.org/psr/psr-2/) and part of the [WordPress coding standard](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards).
 
-Check the code style with ``$ composer check-style`` and fix it with ``$ composer fix-style``.
+Check the code style with ``$ composer check-style``.
 
 ## Feedback
 
@@ -139,7 +132,7 @@ Please see [CONTRIBUTING](.github/CONTRIBUTING.md) and [CODE_OF_CONDUCT](./CODE_
 
 ## Credits
 
-[WP Tabbed Admin Pages](https://github.com/TypistTech/wp-tabbed-admin-pages) is a [Typist Tech](https://www.typist.tech) project and maintained by [Tang Rufus](https://twitter.com/Tangrufus), freelance developer for [hire](https://www.typist.tech/contact/).
+[WP Tabbed Admin Pages](https://github.com/TypistTech/wp-tabbed-admin-pages) is a [Typist Tech](https://typist.tech) project and maintained by [Tang Rufus](https://twitter.com/Tangrufus), freelance developer for [hire](https://typist.tech/contact/).
 
 Full list of contributors can be found [here](https://github.com/TypistTech/wp-tabbed-admin-pages/graphs/contributors).
 
