@@ -23,6 +23,7 @@ Create WordPress admin pages with tabbed navigations, the OOP way.
 - [Frequently Asked Questions](#frequently-asked-questions)
   - [Can two different plugins use this package at the same time?](#can-two-different-plugins-use-this-package-at-the-same-time)
   - [Do you have real life examples that use this package?](#do-you-have-real-life-examples-that-use-this-package)
+  - [It looks awesome. Where can I find some more goodies like this?](#it-looks-awesome-where-can-i-find-some-more-goodies-like-this)
 - [Support](#support)
   - [Why don't you hire me?](#why-dont-you-hire-me)
 - [Developing](#developing)
@@ -77,6 +78,15 @@ Here you go:
  * [WP Better Settings](https://github.com/TypistTech/wp-better-settings)
 
 *Add your own plugin [here](https://github.com/TypistTech/wp-tabbed-admin-pages/edit/master/README.md)*
+
+### It looks awesome. Where can I find some more goodies like this?
+
+* Articles on Typist Tech's [blog](https://typist.tech)
+* [Tang Rufus' WordPress plugins](https://profiles.wordpress.org/tangrufus#content-plugins) on wp.org
+* More projects on [Typist Tech's GitHub profile](https://github.com/TypistTech)
+* Stay tuned on [Typist Tech's newsletter](https://typist.tech/go/newsletter)
+* Follow [Tang Rufus' Twitter account](https://twitter.com/TangRufus)
+* Hire [Tang Rufus](https://typist.tech/contact) to build your next awesome site
 
 ## Support
 
